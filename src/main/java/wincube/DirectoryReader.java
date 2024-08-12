@@ -12,7 +12,7 @@ import java.util.stream.StreamSupport;
 
 public class DirectoryReader {
 
-    public static List<String> getTxtFileNames() {
+    public List<String> getTxtFileNames() {
         Path currentDirectory = Paths.get("");
         try (DirectoryStream<Path> directoryStream = Files.newDirectoryStream(currentDirectory)) {
             return Stream.of(directoryStream)

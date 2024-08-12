@@ -5,11 +5,12 @@ import java.util.stream.Collectors;
 
 public class Txt2CsvConvertor {
 
-    private final AddressCsvFileWriter addressCsvFileWriter = new AddressCsvFileWriter();
+    private final DirectoryReader directoryReader = new DirectoryReader();
     private final TxtFileReader txtFileReader = new TxtFileReader();
+    private final AddressCsvFileWriter addressCsvFileWriter = new AddressCsvFileWriter();
 
     public void startConvert() {
-        List<String> regions = DirectoryReader.getTxtFileNames();
+        List<String> regions = directoryReader.getTxtFileNames();
         for (String region : regions) {
             System.out.println("----------------------------------------");
             System.out.printf("%s convert start%n", region);
