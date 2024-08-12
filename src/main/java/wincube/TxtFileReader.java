@@ -15,7 +15,7 @@ public class TxtFileReader {
 
     private static final String TXT_EXTENSION = ".txt";
 
-    public static List<String> read(String fileName) {
+    public List<String> read(String fileName) {
         Path filePath = Paths.get(fileName + TXT_EXTENSION);
         List<String> contents = new ArrayList<>();
 
