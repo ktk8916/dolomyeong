@@ -18,6 +18,7 @@ public class Txt2CsvConvertor {
                     .stream()
                     .map(Address::from)
                     .collect(Collectors.toList());
+
             addressCsvFileWriter.write(region, addresses);
 
             System.out.printf("%s convert end%n", region);
